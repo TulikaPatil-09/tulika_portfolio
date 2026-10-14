@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Premium Navy Blue + White Theme
+   Colors:
+   - Primary Background: #0B1535
+   - Secondary Background: #111E42
+   - Card Navy: #152452 / White: #FFFFFF
+   - Accent Blue: #2563EB
+   - Blue-Violet Gradient: #6366F1 to #8B5CF6
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Navy Theme */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1535;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E3166;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Gentle Floating Animation */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 5s ease-in-out infinite;
+}
+
+/* Card Hover Transition */
+.premium-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -12px rgba(11, 21, 53, 0.6), 0 0 20px -4px rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Portrait Frame Glow & Shadow */
+.portrait-glow {
+  box-shadow: 0 20px 45px -15px rgba(37, 99, 235, 0.35), 0 0 25px -5px rgba(139, 92, 246, 0.25);
+}
+
+/* Code block typography */
+pre code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
